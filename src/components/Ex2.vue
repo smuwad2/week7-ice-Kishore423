@@ -1,4 +1,6 @@
 <script>
+
+
     export default { 
         // Add code in appropriate places
         data() {
@@ -6,6 +8,14 @@
                 items: ['keyboard', 'mouse', 'iPhone', 'macbook', 'adapter']
             }
             
+        },
+        methods: {
+            deleteItem(){
+                this.items.splice(this.idx, 1) //remove 1 item at given index, idx 
+            },
+            AddItem(){
+                this.items.push(this.something)
+            }
         }
     }
 </script>
@@ -14,5 +24,17 @@
 
     <h2>Shopping Cart</h2>
     <!-- TODO: Add Code Here -->
+     <ul>
+        <li v-for="(item,idx) in items" >
+            {{ item }}
+            <button @click=deleteItem(idx)>Delete!</button>
+
+
+        </li>
+     </ul>
+
+     <input  v-model="something"></input><button @click='AddItem(something)'>Add!</button>
+     
+
    
 </template>
