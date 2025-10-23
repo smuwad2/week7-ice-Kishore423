@@ -25,7 +25,7 @@ import axios from 'axios';
     },
     methods:{
         addPost(){
-            axios.get(`${this.baseUrl}:3000/addPost`,
+            axios.get(`${this.baseUrl}/addPost`,
             {params:{
                 entry:this.entry,
                 subject:this.subject,
@@ -66,7 +66,7 @@ import axios from 'axios';
         <br>
 
         <br>
-        <button @click="addPost">Submit New Post</button>
+        <button @click="addPost()">Submit New Post</button>
         <br></br>
         {{ outputMsg }}
 

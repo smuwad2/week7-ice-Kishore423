@@ -10,8 +10,8 @@
             
         },
         methods: {
-            deleteItem(){
-                this.items.splice(this.idx, 1) //remove 1 item at given index, idx 
+            deleteItem(idx){
+                this.items.splice(idx, 1) //remove 1 item at given index, idx 
             },
             AddItem(){
                 this.items.push(this.something)
